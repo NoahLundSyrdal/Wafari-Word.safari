@@ -9,7 +9,9 @@ public class Grid {
     private int amount;
 
     public Grid(GridGenerator generator){
-        ArrayListgrid = generator.gridGenerator(solution);
+        generator.gridGenerator(solution);
+        amount = solution.size();
+        points = 0;
     }
 
     public void highlighter(String guess){
