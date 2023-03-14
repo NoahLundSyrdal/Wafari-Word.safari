@@ -19,7 +19,17 @@ public class Theme {
     private final String[] christmas = {"tree", "santa", "gift", "reindeer", "ornament", "cookie", "snowman", "candle", "jingle", "mistletoe"};
     private final String[] music = {"rock", "jazz", "pop", "classical", "hip hop", "country", "blues", "folk", "metal", "reggae"};
     private final String[] science = {"chemistry", "biology", "physics", "astronomy", "geology", "ecology", "psychology", "sociology", "anthropology", "botany"};
-    private final String[] nature = {"ocean", "forest", "mountain", "lake", ""}
+    private final String[] nature = {"ocean", "forest", "mountain", "lake", ""};
+    private final String[] landmarks = {"Eiffel Tower", "Taj Mahal", "Golden Gate Bridge", "Great Wall of China", "Statue of Liberty", "Machu Picchu", "Burj Khalifa", "Pyramids of Giza", "Colosseum", "Stonehenge"};
+    private final String[] creatures = {"Dragon", "Phoenix", "Mermaid", "Minotaur", "Cerberus", "Sphinx", "Kraken", "Unicorn", "Chimera", "Centaur"};
+    private final String[] jobs = {"Doctor", "Teacher", "Engineer", "Chef", "Lawyer", "Police Officer", "Firefighter", "Pilot", "Dentist", "Accountant"};
+    private final String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Eris"};
+    private final String[] languages = {"English", "Spanish", "Mandarin", "Arabic", "French", "Russian", "Portuguese", "German", "Japanese", "Korean"};
+    private final String[] books = {"To Kill a Mockingbird", "The Great Gatsby", "1984", "Pride and Prejudice", "The Lord of the Rings", "The Catcher in the Rye", "Brave New World", "Animal Farm", "Fahrenheit 451", "The Hobbit"};
+    private final String[] insects = {"Butterfly", "Ant", "Ladybug", "Mosquito", "Grasshopper", "Cockroach", "Bee", "Dragonfly", "Moth", "Cicada"};
+    private final String[] artStyles = {"Impressionism", "Surrealism", "Cubism", "Realism", "Abstract Expressionism", "Pop Art", "Renaissance", "Baroque", "Minimalism", "Conceptual Art"};
+    private final String[] sportsEquipment = {"Soccer Ball", "Basketball", "Football", "Baseball Bat", "Golf Club", "Tennis Racquet", "Hockey Stick", "Skateboard", "Surfboard", "Bicycle"};
+    private final String[] dogBreeds = {"Golden Retriever", "Labrador Retriever", "German Shepherd", "Poodle", "Bulldog", "Beagle", "Boxer", "Dachshund", "Chihuahua", "Siberian Husky"};
     
 
     public String[] getWordsForTheme(String theme) {
@@ -58,6 +68,26 @@ public class Theme {
                 return science;
             case "nature":
                 return nature;
+            case "landmarks":
+                return landmarks;
+            case "mythological creatures":
+                return creatures;
+            case "jobs":
+                return jobs;
+            case "planets":
+                return planets;
+            case "languages":
+                return languages;
+            case "books":
+                return books;
+            case "insects":
+                return insects;
+            case "art styles":
+                return artStyles;
+            case "sports equipment":
+                return sportsEquipment;
+            case "dog breeds":
+                return dogBreeds;
             default:
                 throw new IllegalArgumentException("Invalid theme: " + theme);
         }
