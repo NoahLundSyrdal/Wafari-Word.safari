@@ -7,7 +7,7 @@ public class Grid {
     private int amount;
 
     public Grid(GridGenerator generator){
-        generator.gridGenerator(solution);
+        generator = new GridGenerator(solution);
         amount = solution.size();
         points = 0;
     }

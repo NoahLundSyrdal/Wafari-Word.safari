@@ -1,14 +1,8 @@
 package project;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Solution {
     private ArrayList<String> solution = new ArrayList<>();
@@ -44,7 +38,6 @@ public class Solution {
     }
 
 
-
     public int getLongestWordSize(){
         String longest = "";
         for (String string : solution) {
@@ -66,66 +59,4 @@ public class Solution {
     }
 
 
-
-    // public String[] getWordsForTheme(String theme) {
-    //     switch (theme.toLowerCase()) {
-    //         case "animals":
-    //             return animals;
-    //         case "sports":
-    //             return sports;
-    //         case "foods":
-    //             return foods;
-    //         case "colors":
-    //             return colors;
-    //         case "countries":
-    //             return countries;
-    //         case "fruits":
-    //             return fruits;
-    //         case "capital cities":
-    //             return capitalCities;
-    //         case "video games":
-    //             return videoGames;
-    //         case "football teams":
-    //             return footballTeams;
-    //         case "mountains":
-    //             return mountains;
-    //         case "rivers":
-    //             return rivers;
-    //         case "easter":
-    //             return easter;
-    //         case "halloween":
-    //             return halloween;
-    //         case "christmas":
-    //             return christmas;
-    //         case "music":
-    //             return music;
-    //         case "science":
-    //             return science;
-    //         case "nature":
-    //             return nature;
-    //         case "landmarks":
-    //             return landmarks;
-    //         case "mythological creatures":
-    //             return creatures;
-    //         case "jobs":
-    //             return jobs;
-    //         case "planets":
-    //             return planets;
-    //         case "languages":
-    //             return languages;
-    //         case "books":
-    //             return books;
-    //         case "insects":
-    //             return insects;
-    //         case "art styles":
-    //             return artStyles;
-    //         case "sports equipment":
-    //             return sportsEquipment;
-    //         case "dog breeds":
-    //             return dogBreeds;
-    //         default:
-    //             throw new IllegalArgumentException("Invalid theme: " + theme);
-    //     }
-    // }
-    
 }
