@@ -6,27 +6,27 @@ import java.util.Random;
 
 public class GridGenerator {
     private char[][] grid;
-    private Solution solution;
+    private ArrayList<String> solution;
     private ArrayList<String> horizontal;
     private ArrayList<String> vertical;
     private Random random = new Random();
 
-    public GridGenerator(Solution solution) {
+    public GridGenerator(ArrayList<String> solution) {
         this.solution = solution;
     }
 
     public void generateHorizontalVertical() {
-        int horizontalSize = random.nextInt(this.solution.size()/2);
-        int verticalSize= random.nextInt(this.solution.size() - horizontalSize);
+        int horizontalSize = this.solution.size()/2;
+        int verticalSize = this.solution.size() - horizontalSize;
 
         horizontal = new ArrayList<String>();
         vertical = new ArrayList<String>();
 
         for (int i = 0; i < horizontalSize; i++) {
-            horizontal.add(this.solution.getWord(i));
+            horizontal.add(this.solution.get(i));
         }
         for (int i = 0; i < verticalSize; i++) {
-            vertical.add(this.solution.getWord(i+horizontalSize));
+            vertical.add(this.solution.get(i+horizontalSize));
         }
 
     }
@@ -40,38 +40,54 @@ public class GridGenerator {
     }
 
     public void createGrid() {
-        this.grid = new char[solution.getLongestWordSize()+2][solution.getLongestWordSize()+2];
+        this.grid = new char[10][10];
         
-        // Random random = new Random();
-        // for (int i = 0; i < this.grid.length; i ++) {
-        //     for (int j = 0; j < this.grid[0].length; j ++) {
-        //         grid[i][j] = (char)(random.nextInt(26) + 'a');
-        //     }
-        // }
+
+    }
+
+    public void fillGrid() {
+        Random random = new Random();
+        for (int i = 0; i < this.grid.length; i ++) {
+            for (int j = 0; j < this.grid[i].length; j ++) {
+                if (grid[i][j] == '\u0000') {
+                    grid[i][j] = (char)(random.nextInt(26) + 'a');
+            }
+            }
+        }
     }
     
     public void setWords() { 
         while (horizontal.size() > 0 || vertical.size() > 0) {
-            int positionY = random.nextInt(solution.getLongestWordSize()+2);
-            int positionX = random.nextInt(solution.getLongestWordSize()+2);
+            int positionY = random.nextInt(2);
+            int positionX = random.nextInt(2);
             if (horizontal.size() > 0) {
                 try {
                     for (char c : horizontal.get(0).toCharArray()) {
+                            System.out.println(1);
                             grid[positionY][positionX] = c;
                         }
+                    horizontal.remove(0);
                     }
+
                 finally {}
             }
 
             else {
                 try {
                     for (char c : vertical.get(0).toCharArray()) {
+                            System.out.println(1);
                             grid[positionY][positionX] = c;
                         }
+                    vertical.remove(0);
                     }
+                    
                 finally {}
             }
         }
+    }
+
+    public char[][] getGrid() {
+        return grid;
     }
     
 

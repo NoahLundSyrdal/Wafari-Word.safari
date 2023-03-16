@@ -1,17 +1,28 @@
 package project;
 
+import java.util.ArrayList;
+
 public class test {
-    private String[][] test;
-
     public static void main(String[] args) {
-        test t = new test();
-        t.createChar();
-        System.out.println(t.test[0][0]);
-    }
+        ArrayList<String> solution = new ArrayList<String>();
+        solution.add("TEST");
 
-    public void createChar() {
-        test = new String[10][10];
-
+        GridGenerator grid = new GridGenerator(solution);
+        grid.createGrid();
+        grid.generateHorizontalVertical();
+        grid.setWords();
+        grid.fillGrid();
+        
+        System.out.println(grid.getGrid()[0]);
+        System.out.println(grid.getGrid()[1]);
+        System.out.println(grid.getGrid()[2]);
+        System.out.println(grid.getGrid()[3]);
+        System.out.println(grid.getGrid()[4]);
+        System.out.println(grid.getGrid()[5]);
+        System.out.println(grid.getGrid()[6]);
+        System.out.println(grid.getGrid()[7]);
+        System.out.println(grid.getGrid()[8]);
+        System.out.println(grid.getGrid()[9]);
         
     }
 }
