@@ -6,12 +6,12 @@ import java.util.Random;
 
 public class GridGenerator {
     private char[][] grid;
-    private ArrayList<String> solution;
+    private Solution solution;
     private ArrayList<String> horizontal;
     private ArrayList<String> vertical;
     private Random random = new Random();
 
-    public GridGenerator(ArrayList<String> solution) {
+    public GridGenerator(Solution solution) {
         this.solution = solution;
     }
 
@@ -23,10 +23,10 @@ public class GridGenerator {
         vertical = new ArrayList<String>();
 
         for (int i = 0; i < horizontalSize; i++) {
-            horizontal.add(this.solution.get(i));
+            horizontal.add(this.solution.getWord(i));
         }
         for (int i = 0; i < verticalSize; i++) {
-            vertical.add(this.solution.get(i+horizontalSize));
+            vertical.add(this.solution.getWord(i+horizontalSize));
         }
 
     }
@@ -40,7 +40,7 @@ public class GridGenerator {
     }
 
     public void createGrid() {
-        this.grid = new char[10][10];
+        this.grid = new char[solution.getLongestWordSize()+2][solution.getLongestWordSize()+2];
         
 
     }
@@ -50,7 +50,8 @@ public class GridGenerator {
         for (int i = 0; i < this.grid.length; i ++) {
             for (int j = 0; j < this.grid[i].length; j ++) {
                 if (grid[i][j] == '\u0000') {
-                    grid[i][j] = (char)(random.nextInt(26) + 'a');
+                    grid[i][j] = '-';
+                    //grid[i][j] = (char)(random.nextInt(26) + 'a');
                     
             }
             }
