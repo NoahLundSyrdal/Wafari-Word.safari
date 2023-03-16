@@ -1,4 +1,4 @@
-package java;
+package project;
 
 public class User {
    private String guess;

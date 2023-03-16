@@ -1,4 +1,4 @@
-package java;
+package project;
 import java.util.random.*;
 
 public class Theme {

@@ -1,4 +1,4 @@
-package java;
+package project;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -50,24 +50,30 @@ public class GridGenerator {
         // }
     }
     
-    public void setWords() {
-        int i;
-        int j;
-        
-        while (horizontal.size() > 0 && vertical.size() > 0) {
-            try {
-                int r = random.nextInt(vertical.size())
-                for (char c : horizontal.get(r)) {
-                    
-                }
+    public void setWords() { 
+        while (horizontal.size() > 0 || vertical.size() > 0) {
+            int positionY = random.nextInt(solution.getLongestWordSize()+2);
+            int positionX = random.nextInt(solution.getLongestWordSize()+2);
+            if (horizontal.size() > 0) {
+                try {
+                    for (char c : horizontal.get(0).toCharArray()) {
+                            grid[positionY][positionX] = c;
+                        }
+                    }
+                finally {}
             }
-        
 
-        else {
-
+            else {
+                try {
+                    for (char c : vertical.get(0).toCharArray()) {
+                            grid[positionY][positionX] = c;
+                        }
+                    }
+                finally {}
+            }
         }
     }
-    }
+    
 
 }
  
