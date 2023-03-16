@@ -12,9 +12,11 @@ import java.util.Scanner;
 
 public class Solution {
     private ArrayList<String> solution = new ArrayList<>();
+    private HashMap<String, String[]> map;
 
 
-    Solution(String theme, int number){
+    public Solution(String theme, int number){
+        map = getMap();
         String[] words = getWordsForTheme(theme, number);
         if(number>10 || number > words.length){
             throw new IllegalStateException("too big of a grid");
@@ -35,30 +37,6 @@ public class Solution {
         HashMap<String,String> = readDictionary(Words.txt);
     }
 
-
-    public HashMap<String, String> readDictionary(String fileName) {
-        HashMap<String, String> dictionary = new HashMap<String, String>();
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(fileName));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] words = line.split("=");
-                dictionary.put(words[0], words[1]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (reader != null) {
-                    reader.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return dictionary;
-    }
 
 
     public int getLongestWordSize(){
