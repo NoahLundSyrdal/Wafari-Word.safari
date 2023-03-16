@@ -51,40 +51,57 @@ public class GridGenerator {
             for (int j = 0; j < this.grid[i].length; j ++) {
                 if (grid[i][j] == '\u0000') {
                     grid[i][j] = (char)(random.nextInt(26) + 'a');
+                    
             }
             }
         }
     }
     
     public void setWords() { 
+        outerloop: 
         while (horizontal.size() > 0 || vertical.size() > 0) {
-            int positionY = random.nextInt(2);
-            int positionX = random.nextInt(2);
-            if (horizontal.size() > 0) {
-                try {
-                    for (char c : horizontal.get(0).toCharArray()) {
-                            System.out.println(1);
-                            grid[positionY][positionX] = c;
-                        }
-                    horizontal.remove(0);
-                    }
+            if (vertical.size() > horizontal.size()) {
+                int positionY = random.nextInt(grid.length-vertical.get(0).length()-1);
+                int positionX = random.nextInt(grid[0].length-1);
 
-                finally {}
+                for (int i = 0; i < vertical.get(0).length(); i++) {
+                    if (grid[positionY+i][positionX] != vertical.get(0).charAt(i)) {
+                        if (grid[positionY+i][positionX] != '\u0000') {
+                            continue outerloop;
+                        }
+                    }
+                }
+
+                for (int i = 0; i < vertical.get(0).length(); i++) {
+                    grid[positionY+i][positionX] = vertical.get(0).charAt(i);
+                }
+
+                vertical.remove(0);
             }
 
             else {
-                try {
-                    for (char c : vertical.get(0).toCharArray()) {
-                            System.out.println(1);
-                            grid[positionY][positionX] = c;
+                int positionY = random.nextInt(grid.length-1);
+                int positionX = random.nextInt(grid[0].length-horizontal.get(0).length()-1);
+
+
+                for (int i = 0; i < horizontal.get(0).length(); i++) {
+                    if (grid[positionY][positionX+i] != horizontal.get(0).charAt(i)) {
+                        if (grid[positionY][positionX+i] != '\u0000') {
+                            continue outerloop;
                         }
-                    vertical.remove(0);
                     }
-                    
-                finally {}
+                }
+
+                for (int i = 0; i < horizontal.get(0).length(); i++) {
+                    grid[positionY][positionX+i] = horizontal.get(0).charAt(i);
+                }
+
+                horizontal.remove(0);
+
             }
         }
     }
+            
 
     public char[][] getGrid() {
         return grid;

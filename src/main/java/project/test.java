@@ -5,7 +5,10 @@ import java.util.ArrayList;
 public class test {
     public static void main(String[] args) {
         ArrayList<String> solution = new ArrayList<String>();
-        solution.add("TEST");
+        solution.add("noah");
+        solution.add("matias");
+        solution.add("johan");
+        solution.add("computer");
 
         GridGenerator grid = new GridGenerator(solution);
         grid.createGrid();
