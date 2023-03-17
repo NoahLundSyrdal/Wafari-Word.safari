@@ -1,4 +1,4 @@
-animals;lion tiger ,bear,elephant,giraffe,rhinoceros,hippopotamus,crocodile,monkey,zebra
+animals;lion tiger,bear,elephant,giraffe,rhinoceros,hippopotamus,crocodile,monkey,zebra
 sports;baseball,football,basketball,soccer,tennis,hockey,golf,swimming,cycling,running
 foods;pizza,hamburger,sushi,spaghetti,tacos,burrito,steak,salad,sandwich,fries
 colors;red,blue,green,yellow,purple,orange,pink,brown,black,white
