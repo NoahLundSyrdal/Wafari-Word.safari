@@ -6,15 +6,14 @@ public class test {
     public static void main(String[] args) {
 
 
-        Solution solution = new Solution("planets", 4);
-        GridGenerator grid = new GridGenerator(solution);
-        grid.createGrid();
-        grid.generateHorizontalVertical();
-        grid.setWords();
-        grid.fillGrid();
+        Solution solution = new Solution("halloween", 10);
+        GridGenerator gridGenerator = new GridGenerator(solution);
 
-        for (int i = 0; i < grid.getGrid().length; i++) {
-            System.out.println(grid.getGrid()[i]);
+        gridGenerator.gridCreate();
+        gridGenerator.fillGrid();
+
+        for (int i = 0; i < gridGenerator.getGrid().length; i++) {
+            System.out.println(gridGenerator.getGrid()[i]);
 
         }
 

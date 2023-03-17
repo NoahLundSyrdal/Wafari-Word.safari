@@ -10,23 +10,26 @@ public class GridGenerator {
     private ArrayList<String> horizontal;
     private ArrayList<String> vertical;
     private Random random = new Random();
+    private int horizontalSize;
+    private int verticalSize;
+
 
     public GridGenerator(Solution solution) {
         this.solution = solution;
+        this.horizontalSize = this.solution.size()/2;
+        this.verticalSize = this.solution.size() - this.horizontalSize;
     }
 
     public void generateHorizontalVertical() {
-        int horizontalSize = this.solution.size()/2;
-        int verticalSize = this.solution.size() - horizontalSize;
-
+        
         horizontal = new ArrayList<String>();
         vertical = new ArrayList<String>();
 
-        for (int i = 0; i < horizontalSize; i++) {
+        for (int i = 0; i < this.horizontalSize; i++) {
             horizontal.add(this.solution.getWord(i));
         }
-        for (int i = 0; i < verticalSize; i++) {
-            vertical.add(this.solution.getWord(i+horizontalSize));
+        for (int i = 0; i < this.verticalSize; i++) {
+            vertical.add(this.solution.getWord(i+this.horizontalSize));
         }
 
     }
@@ -39,8 +42,8 @@ public class GridGenerator {
         return vertical;
     }
 
-    public void createGrid() {
-        this.grid = new char[solution.getLongestWordSize()+2][solution.getLongestWordSize()+2];
+    public void createGrid(int size) {
+        this.grid = new char[solution.getLongestWordSize()+size][solution.getLongestWordSize()+size];
         
 
     }
@@ -58,12 +61,33 @@ public class GridGenerator {
         }
     }
     
-    public void setWords() { 
+    public void gridCreate() {
+        int counter = 0; 
+        int sizeCounter = 0;
+
+        createGrid(sizeCounter);
+        generateHorizontalVertical();
+
+
         outerloop: 
         while (horizontal.size() > 0 || vertical.size() > 0) {
+            counter ++;
+
+            if (counter > 100) {
+                createGrid(sizeCounter);
+                generateHorizontalVertical();
+            }
+
+            if (counter > 1000) {
+                sizeCounter ++;
+                createGrid(sizeCounter);
+                generateHorizontalVertical();
+                counter = 0;
+            }
+
             if (vertical.size() > horizontal.size()) {
-                int positionY = random.nextInt(grid.length-vertical.get(0).length()-1);
-                int positionX = random.nextInt(grid[0].length-1);
+                int positionY = random.nextInt(grid.length-vertical.get(0).length()+1);
+                int positionX = random.nextInt(grid[0].length);
 
                 for (int i = 0; i < vertical.get(0).length(); i++) {
                     if (grid[positionY+i][positionX] != vertical.get(0).charAt(i)) {
@@ -81,8 +105,8 @@ public class GridGenerator {
             }
 
             else {
-                int positionY = random.nextInt(grid.length-1);
-                int positionX = random.nextInt(grid[0].length-horizontal.get(0).length()-1);
+                int positionY = random.nextInt(grid.length);
+                int positionX = random.nextInt(grid[0].length-horizontal.get(0).length()+1);
 
 
                 for (int i = 0; i < horizontal.get(0).length(); i++) {
@@ -100,6 +124,9 @@ public class GridGenerator {
                 horizontal.remove(0);
 
             }
+
+
+
         }
     }
             
