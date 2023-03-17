@@ -78,7 +78,7 @@ public class GridGenerator {
                 generateHorizontalVertical();
             }
 
-            if (counter > 1000) {
+            if (counter > 10000) {
                 sizeCounter ++;
                 createGrid(sizeCounter);
                 generateHorizontalVertical();

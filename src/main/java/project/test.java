@@ -6,7 +6,7 @@ public class test {
     public static void main(String[] args) {
 
 
-        Solution solution = new Solution("halloween", 10);
+        Solution solution = new Solution("foods", 10);
         GridGenerator gridGenerator = new GridGenerator(solution);
 
         gridGenerator.gridCreate();
