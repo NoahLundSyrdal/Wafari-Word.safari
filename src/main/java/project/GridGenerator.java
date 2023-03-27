@@ -53,8 +53,8 @@ public class GridGenerator {
         for (int i = 0; i < this.grid.length; i ++) {
             for (int j = 0; j < this.grid[i].length; j ++) {
                 if (grid[i][j] == '\u0000') {
-                    grid[i][j] = '-';
-                    //grid[i][j] = (char)(random.nextInt(26) + 'a');
+                    //grid[i][j] = '-';
+                    grid[i][j] = (char)(random.nextInt(26) + 'a');
                     
             }
             }

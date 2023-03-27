@@ -1,6 +1,7 @@
 package project;
 
-public class Grid {
+
+public class Grid{
     private char[][] grid;
     private Solution solution;
     private int points;
@@ -22,4 +23,5 @@ public class Grid {
             }
         }
     }
+
 }
