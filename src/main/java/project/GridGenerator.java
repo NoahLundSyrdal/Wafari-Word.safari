@@ -26,10 +26,10 @@ public class GridGenerator {
         vertical = new ArrayList<String>();
 
         for (int i = 0; i < this.horizontalSize; i++) {
-            horizontal.add(this.solution.getWord(i));
+            horizontal.add(this.solution.getWord(i).toLowerCase());
         }
         for (int i = 0; i < this.verticalSize; i++) {
-            vertical.add(this.solution.getWord(i+this.horizontalSize));
+            vertical.add(this.solution.getWord(i+this.horizontalSize).toLowerCase());
         }
 
     }

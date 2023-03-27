@@ -8,7 +8,7 @@ public class test{
 
     
 
-        Solution solution = new Solution("foods", 2);
+        Solution solution = new Solution("colors", 5);
         GridGenerator gridGenerator = new GridGenerator(solution);
 
         gridGenerator.gridCreate();
