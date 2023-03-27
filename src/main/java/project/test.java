@@ -6,6 +6,7 @@ import java.util.Collection;
 public class test{
     public static void main(String[] args) {
 
+    
 
         Solution solution = new Solution("foods", 2);
         GridGenerator gridGenerator = new GridGenerator(solution);
