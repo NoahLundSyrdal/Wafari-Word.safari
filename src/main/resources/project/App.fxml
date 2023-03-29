@@ -20,7 +20,7 @@
          </font>
       </Label>
       <ComboBox fx:id="theme" layoutX="225.0" layoutY="155.0" prefWidth="150.0" promptText="Choose theme" />
-      <Button fx:id="createButton" layoutX="225.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Wafari" />
+      <Button fx:id="createButton" layoutX="225.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Wafari" onAction="#buttonOnClick"/>
       <ComboBox fx:id="amount" layoutX="225.0" layoutY="188.0" prefWidth="150.0" promptText="Number of words"/>
 
    </children>
