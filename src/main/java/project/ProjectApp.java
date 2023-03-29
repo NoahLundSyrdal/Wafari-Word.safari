@@ -13,11 +13,6 @@ import java.io.IOException;
 
 
 public class ProjectApp extends Application {
-    ObservableList<String> optionsList = FXCollections.observableArrayList("animals","sports","foods","colors","countries","fruits","capitalCities","videoGames","footballTeams","mountains","rivers","easter","halloween","christmas","music","science","nature","landmarks","creatures","jobs","planets","languages","books","insects","artStyles","sportsEquipment","dogBreeds");
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("App.fxml"));
-    Parent root = loader.load();
-    ComboBox<String> comboBox = (ComboBox<String>) loader.getNamespace().get("MyComboBox");
-    comboBox.setItems(optionsList);
     public static void main(String[] args) {
         Application.launch(args);
     }
