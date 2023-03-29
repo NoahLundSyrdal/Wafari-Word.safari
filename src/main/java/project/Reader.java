@@ -10,8 +10,8 @@ public class Reader {
     private HashMap<String, String[]> map;
 
     public Reader() {
-       this.map = readDictionary("C:/Users/matia/Documents/GIT2023/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
-       //this.map = readDictionary("/Users/noahsyrdal/Desktop/Objekt orentert programmering PROSJEKT/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
+       //this.map = readDictionary("C:/Users/matia/Documents/GIT2023/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
+       this.map = readDictionary("/Users/noahsyrdal/Desktop/OOP PROSJEKT/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
     }
     public HashMap<String, String[]> readDictionary(String fileName) {
         HashMap<String, String[]> dictionary = new HashMap<String, String[]>();

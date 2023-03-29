@@ -21,8 +21,14 @@ public class ProjectController {
     }
 
     public void buttonOnClick() throws IOException{
-        //Solution solution = new Solution(theme.getValue(), amount.getValue());
-        //GridGenerator gridGenerator = new GridGenerator(solution);
+        if(theme.getValue()!= null && amount.getValue()!=null){
+            Solution solution = new Solution(theme.getValue(), amount.getValue());
+            System.out.println(solution);
+            GridGenerator grid = new GridGenerator(solution);
+        }
+        else{
+            System.out.println("You need to select both values");
+        }
         Stage newStage = (Stage)createButton.getScene().getWindow();
         newStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Game.fxml"))));
         newStage.show();
