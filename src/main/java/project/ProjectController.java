@@ -15,10 +15,10 @@ public class ProjectController {
         amount.getItems().addAll(1,2,3,4,5,6,7,8,9,10);
     }
 
-    public void buttonOnClick(){
-        Solution solution = new Solution(theme.getValue(), amount.getValue());
-        GridGenerator gridGenerator = new GridGenerator(solution);
-   } 
+   // public void buttonOnClick(){
+        //Solution solution = new Solution(theme.getValue(), amount.getValue());
+        //GridGenerator gridGenerator = new GridGenerator(solution);
+//} 
 
 
 }
