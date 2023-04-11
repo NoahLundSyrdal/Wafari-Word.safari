@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="CENTER" layoutX="150.0" layoutY="14.0" prefHeight="300.0" prefWidth="300.0">
+      <VBox alignment="CENTER" layoutX="150.0" layoutY="41.0" prefHeight="300.0" prefWidth="300.0">
          <children>
             <GridPane fx:id="gridLayout">
               <columnConstraints>
@@ -24,9 +24,20 @@
             </GridPane>
          </children>
       </VBox>
-      <Button fx:id="homeButton" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#homeButtonClick" text="Go back home" />
       <TextField fx:id="inputField" layoutX="146.0" layoutY="353.0" onAction="#inputFieldAction" prefHeight="25.0" prefWidth="307.0" promptText="Guess!" />
-      <Label fx:id="score" layoutX="510.0" layoutY="356.0" prefHeight="17.0" prefWidth="75.0" text="Score: 0/10">
+      <Button fx:id="homeButton" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#homeButtonClick" text="Go back home" />
+      <Label fx:id="score" layoutX="494.0" layoutY="356.0" prefHeight="20.0" prefWidth="87.0" text="Score: 0/10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="theme" alignment="CENTER" layoutX="211.0" layoutY="21.0" prefHeight="17.0" prefWidth="178.0" text="Theme: Colors" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="solutionButton" layoutX="15.0" layoutY="315.0" mnemonicParsing="false" onAction="#showSolutionClick" text="Show solution" />
+      <Label fx:id="moreText" alignment="CENTER" layoutX="150.0" layoutY="356.0" prefHeight="20.0" prefWidth="300.0" text="Label" textAlignment="CENTER" visible="false">
          <font>
             <Font size="14.0" />
          </font>

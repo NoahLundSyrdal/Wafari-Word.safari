@@ -1,27 +1,26 @@
-animals;lion,tiger,bear,elephant,giraffe,rhinoceros,hippopotamus,crocodile,monkey,zebra
-sports;baseball,football,basketball,soccer,tennis,hockey,golf,swimming,cycling,running
-foods;pizza,hamburger,sushi,spaghetti,tacos,burrito,steak,salad,sandwich,fries
-colors;red,blue,green,yellow,purple,orange,pink,brown,black,white
-countries;USA,Canada,Mexico,France,Germany,Spain,China,Japan,Russia,Brazil
-fruits;apple,banana,orange,strawberry,kiwi,grapefruit,peach,mango,papaya,watermelon
-capitalCities;Tokyo,Washington,Paris,London,Beijing,Moscow,Berlin,NewDelhi,Canberra,Rome
-videoGames;Minecraft,Fortnite,LeagueofLegends,WorldofWarcraft,Overwatch,Halo,CallofDuty,GTA,Zelda,Mario
-footballTeams;Barcelona,RealMadrid,ManchesterUnited,Liverpool,BayernMunich,Juventus,PSG,ManchesterCity,Chelsea,Arsenal
-mountains;MountEverest,Kilimanjaro,Denali,MountFuji,Matterhorn,K2,MountWhitney,Aconcagua,MontBlanc,MountElbrus
-rivers;Nile,Amazon,Mississippi,Yangtze,Ganges,Danube,Mekong,Volga,Colorado,Thames
-easter;egg,bunny,basket,chocolate,jesus,lamb,cross,resurrection,daffodil,spring
-halloween;pumpkin,witch,ghost,bat,candy,spider,skeleton,costume,zombie,vampire
-christmas;tree,santa,gift,reindeer,ornament,cookie,snowman,candle,jingle,mistletoe
-music;rock,jazz,pop,classical,hiphop,country,blues,folk,metal,reggae
-science;chemistry,biology,physics,astronomy,geology,ecology,psychology,sociology,anthropology,botany
-nature;ocean,forest,mountain,lake,threes,snow,rain,savanna,tundra,jungle,sand
-landmarks;EiffelTower,TajMahal,GoldenGateBridge,GreatWallofChina,StatueofLiberty,MachuPicchu,BurjKhalifa,PyramidsofGiza,Colosseum,Stonehenge
-creatures;Dragon,Phoenix,Mermaid,Minotaur,Cerberus,Sphinx,Kraken,Unicorn,Chimera,Centaur
-jobs;Doctor,Teacher,Engineer,Chef,Lawyer,PoliceOfficer,Firefighter,Pilot,Dentist,Accountant
-planets;Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune,Pluto,Eris
-languages;English,Spanish,Mandarin,Arabic,French,Russian,Portuguese,German,Japanese,Korean
-books;ToKillaMockingbird,TheGreatGatsby,1984,PrideandPrejudice,TheLordoftheRings,TheCatcherintheRye,BraveNewWorld,AnimalFarm,Fahrenheit451,TheHobbit
-insects;Butterfly,Ant,Ladybug,Mosquito,Grasshopper,Cockroach,Bee,Dragonfly,Moth,Cicada
-artStyles;Impressionism,Surrealism,Cubism,Realism,AbstractExpressionism,PopArt,Renaissance,Baroque,Minimalism,ConceptualArt
-sportsEquipment;SoccerBall,Basketball,Football,BaseballBat,GolfClub,TennisRacquet,HockeyStick,Skateboard,Surfboard,Bicycle
-dogBreeds;GoldenRetriever,LabradorRetriever,GermanShepherd,Poodle,Bulldog,Beagle,Boxer,Dachshund,Chihuahua,SiberianHusky
+Animals;lion,tiger,bear,elephant,giraffe,rhinoceros,hippo,crocodile,monkey,zebra
+Sports;baseball,football,basketball,soccer,tennis,hockey,golf,swimming,cycling,running
+Colors;red,blue,green,yellow,purple,orange,pink,brown,black,white
+Countries;USA,Canada,Mexico,France,Germany,Spain,China,Japan,Russia,Brazil
+Fruits;apple,banana,orange,strawberry,kiwi,grapefruit,peach,mango,papaya,watermelon
+Capital Cities;Tokyo,Washington,Paris,London,Beijing,Moscow,Berlin,NewDelhi,Canberra,Rome
+Video Games;Minecraft,Fortnite,lol,wow,Overwatch,Halo,CallofDuty,GTA,Zelda,Mario
+Football Teams;Barcelona,RealMadrid,manu,Liverpool,Juventus,PSG,ManCity,Chelsea,Arsenal,Napoli,Leipzig
+Mountains;Everest,Denali,MountFuji,Matterhorn,K2,Whitney,Aconcagua,Blanc,Elbrus,Glittertind
+Rivers;Nile,Amazon,Yangtze,Ganges,Danube,Mekong,Volga,Colorado,Thames,Glomma
+Easter;egg,bunny,basket,chocolate,jesus,lamb,cross,spring,mountains,cabin
+Halloween;pumpkin,witch,ghost,bat,candy,spider,skeleton,costume,zombie,vampire
+Christmas;tree,santa,gift,reindeer,ornament,cookie,snowman,candle,jingle,mistletoe
+Music;rock,jazz,pop,classical,hiphop,country,blues,folk,metal,reggae
+Science;chemistry,biology,physics,astronomy,geology,ecology,psychology,sociology,anthropology,botany
+Nature;ocean,forest,mountain,lake,threes,snow,rain,savanna,tundra,jungle,sand
+Landmarks;EiffelTower,TajMahal,GoldenGate,GreatWall,MachuPicchu,BurjKhalifa,Pyramids,Colosseum,Stonehenge,EmpireState
+Creatures;Dragon,Phoenix,Mermaid,Minotaur,Cerberus,Sphinx,Kraken,Unicorn,Chimera,Centaur
+Jobs;Doctor,Teacher,Engineer,Chef,Lawyer,Police,Firefighter,Pilot,Dentist,Accountant
+Planets;Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune,Pluto,Eris
+Languages;English,Spanish,Mandarin,Arabic,French,Russian,Portuguese,German,Japanese,Korean
+Books;ToKillaMockingbird,TheGreatGatsby,1984,PrideandPrejudice,TheLordoftheRings,TheCatcherintheRye,BraveNewWorld,AnimalFarm,Fahrenheit451,TheHobbit
+Insects;Butterfly,Ant,Ladybug,Mosquito,Grasshopper,Cockroach,Bee,Dragonfly,Moth,Cicada
+Art Styles;Impressionism,Surrealism,Cubism,Realism,AbstractExpressionism,PopArt,Renaissance,Baroque,Minimalism,ConceptualArt
+Sports Equipment;SoccerBall,Basketball,Football,BaseballBat,GolfClub,TennisRacquet,HockeyStick,Skateboard,Surfboard,Bicycle
+Dog Breeds;GoldenRetriever,LabradorRetriever,GermanShepherd,Poodle,Bulldog,Beagle,Boxer,Dachshund,Chihuahua,SiberianHusky

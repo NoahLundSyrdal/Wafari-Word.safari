@@ -26,6 +26,7 @@ public class ControllerMainScreen {
         loader.setController(this);
 
         primaryStage.setScene(new Scene(loader.load()));
+        primaryStage.setResizable(false);
     }
     
     public void show() {
@@ -34,7 +35,7 @@ public class ControllerMainScreen {
 
     @FXML
     public void initialize() {
-        theme.getItems().addAll("animals","sports","foods","colors","countries","fruits","capitalCities","videoGames","footballTeams","mountains","rivers","easter","halloween","christmas","music","science","nature","landmarks","creatures","jobs","planets","languages","books","insects","artStyles","sportsEquipment","dogBreeds");
+        theme.getItems().addAll("Animals","Sports","Colors","Countries","Fruits","Capital Cities","Video Games","Football Teams","Mountains","Rivers","Easter","Halloween","Christmas","Music","Science","Nature","Landmarks","Creatures","Jobs","Planets","Languages","Insects");
         amount.getItems().addAll(1,2,3,4,5,6,7,8,9,10);
     }
     

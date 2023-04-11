@@ -2,6 +2,7 @@ package project;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.HashMap;
 
 
 public class Grid {
@@ -12,6 +13,7 @@ public class Grid {
     private Random random = new Random();
     private int horizontalSize;
     private int verticalSize;
+    private HashMap<String,String[]> wordCoordinates = new HashMap<String, String[]>();
 
 
     public Grid(Solution solution) {
@@ -46,8 +48,8 @@ public class Grid {
     }
 
     public void createGrid(int size) {
-        this.grid = new char[solution.getLongestWordSize()+size][solution.getLongestWordSize()+size];
-        
+        //this.grid = new char[solution.getLongestWordSize()+size][solution.getLongestWordSize()+size];
+        this.grid = new char[size][size];
 
     }
 
@@ -66,7 +68,7 @@ public class Grid {
     
     public void gridCreate() {
         int counter = 0; 
-        int sizeCounter = 0;
+        int sizeCounter = 12;
 
         createGrid(sizeCounter);
         generateHorizontalVertical();
@@ -76,13 +78,8 @@ public class Grid {
         while (horizontal.size() > 0 || vertical.size() > 0) {
             counter ++;
 
-            if (counter > 100) {
-                createGrid(sizeCounter);
-                generateHorizontalVertical();
-            }
-
-            if (counter > 10000) {
-                sizeCounter ++;
+            if (counter > 1000) {
+                wordCoordinates.clear();
                 createGrid(sizeCounter);
                 generateHorizontalVertical();
                 counter = 0;
@@ -103,7 +100,8 @@ public class Grid {
                 for (int i = 0; i < vertical.get(0).length(); i++) {
                     grid[positionY+i][positionX] = vertical.get(0).charAt(i);
                 }
-
+                String[] coordinates = {Integer.toString(positionX), Integer.toString(positionY), "v"};
+                wordCoordinates.put(vertical.get(0), coordinates);
                 vertical.remove(0);
             }
 
@@ -124,6 +122,9 @@ public class Grid {
                     grid[positionY][positionX+i] = horizontal.get(0).charAt(i);
                 }
 
+                
+                String[] coordinates = {Integer.toString(positionX), Integer.toString(positionY), "h"};
+                wordCoordinates.put(horizontal.get(0), coordinates);
                 horizontal.remove(0);
 
             }
@@ -138,6 +139,9 @@ public class Grid {
         return grid;
     }
     
+    public HashMap<String, String[]> getWordCoordinates() {
+        return wordCoordinates;
+    }
 
 }
  
