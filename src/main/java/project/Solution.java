@@ -28,6 +28,7 @@ public class Solution {
             }
         }
     }
+
     public String[] getWordsForTheme(String theme){
         try {
             return map.get(theme);
@@ -36,7 +37,6 @@ public class Solution {
         }
 
     }
-
 
     public int getLongestWordSize(){
         String longest = "";
@@ -51,9 +51,11 @@ public class Solution {
     public ArrayList<String> getSolution() {
         return solution;
     }
+
     public int size(){
         return solution.size();
     }
+    
     public String getWord(int i){
         return solution.get(i);
     }
