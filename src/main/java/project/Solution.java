@@ -1,6 +1,7 @@
 package project;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -10,7 +11,7 @@ public class Solution {
 
 
     public Solution(String theme, int number){
-        Reader reader = new Reader();
+        FileManager reader = new FileManager();
         map = reader.getMap();
         String[] words = getWordsForTheme(theme);
         if(number>10 || number > words.length){
@@ -27,6 +28,11 @@ public class Solution {
                 i = i-1;
             }
         }
+    }
+
+    public Solution(String[] words) {
+        this.solution = new ArrayList<String>(Arrays.asList(words));
+
     }
 
     public String[] getWordsForTheme(String theme){

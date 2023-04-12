@@ -1,15 +1,18 @@
 package project;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Set;
 
-public class Reader {
+public class FileManager {
 
     private HashMap<String, String[]> map;
 
-    public Reader() {
+    public FileManager() {
        this.map = readDictionary("C:/Users/matia/Documents/GIT2023/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
        //this.map = readDictionary("/Users/noahsyrdal/Desktop/OOP PROSJEKT/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
     }
@@ -42,5 +45,25 @@ public class Reader {
     }
     public HashMap<String, String[]> getMap() {
         return map;
+    }
+
+    public Set<String> getAllThemes() {
+        return map.keySet();
+    }
+
+    public void addSolution(String theme, String[] words) {
+        BufferedWriter writer;
+        String wordString = String.join(",", words);
+
+        try {
+            writer = new BufferedWriter(new FileWriter("C:/Users/matia/Documents/GIT2023/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt", true));
+            writer.append(theme + ";" + wordString);
+            writer.newLine();
+            writer.close();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }

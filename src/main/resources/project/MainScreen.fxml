@@ -21,7 +21,8 @@
       </Label>
       <ComboBox fx:id="theme" layoutX="225.0" layoutY="161.0" prefWidth="150.0" promptText="Choose theme" />
       <ComboBox fx:id="amount" layoutX="225.0" layoutY="200.0" prefWidth="150.0" promptText="Number of words" />
-      <Button fx:id="createButton" layoutX="225.0" layoutY="240.0" mnemonicParsing="false" onAction="#buttonOnClick" prefHeight="25.0" prefWidth="149.0" text="Create Wafari" />
+      <Button fx:id="createButton" layoutX="225.0" layoutY="240.0" mnemonicParsing="false" onAction="#buttonOnClick" prefHeight="25.0" prefWidth="149.0" text="Play Wafari" />
+      <Button fx:id="customButton" layoutX="225.0" layoutY="318.0" mnemonicParsing="false" onAction="#createCustomClick" prefHeight="25.0" prefWidth="149.0" text="Or Create Custom" />
 
    </children>
 </AnchorPane>

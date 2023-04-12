@@ -18,6 +18,11 @@ public class ControllerMainScreen {
     private ComboBox<Integer> amount;
     @FXML
     private Button createButton;
+    @FXML
+    private Button customButton;
+
+    private String finalTheme;
+    private int finalAmount;
 
     public ControllerMainScreen(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
@@ -35,25 +40,35 @@ public class ControllerMainScreen {
 
     @FXML
     public void initialize() {
-        theme.getItems().addAll("Animals","Sports","Colors","Countries","Fruits","Capital Cities","Video Games","Football Teams","Mountains","Rivers","Easter","Halloween","Christmas","Music","Science","Nature","Landmarks","Creatures","Jobs","Planets","Languages","Insects");
+        FileManager fileManager = new FileManager();
+        theme.getItems().addAll(fileManager.getAllThemes());
         amount.getItems().addAll(1,2,3,4,5,6,7,8,9,10);
     }
     
     @FXML
     public void buttonOnClick() throws IOException{
         if(theme.getValue()!= null && amount.getValue()!=null) {
+            finalAmount = amount.getValue();
+            finalTheme = theme.getValue();
+
             ControllerGameScreen controllerGameScreen = new ControllerGameScreen(this.primaryStage, this);
             controllerGameScreen.show();
 
         }
     } 
+    @FXML
+    public void createCustomClick() throws IOException {
+        ControllerCustomScreen controllerCustomScreen = new ControllerCustomScreen(this.primaryStage);
+        controllerCustomScreen.show();
+
+    }
 
     public String getTheme() {
-        return theme.getValue();
+        return finalTheme;
     }
 
     public int getAmount() {
-        return amount.getValue();
+        return finalAmount;
     }
 
 }

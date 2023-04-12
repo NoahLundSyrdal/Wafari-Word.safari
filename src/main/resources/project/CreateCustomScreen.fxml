@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="playWafari" layoutX="200.0" layoutY="302.0" mnemonicParsing="false" onAction="#playWafariClick" prefHeight="25.0" prefWidth="200.0" text="Play Wafari" />
+      <TextField fx:id="themeField" layoutX="200.0" layoutY="32.0" prefHeight="25.0" prefWidth="200.0" promptText="Theme" />
+      <TextArea fx:id="wordsField" layoutX="200.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" promptText="Write words" />
+      <Button fx:id="saveTheme" layoutX="200.0" layoutY="353.0" mnemonicParsing="false" onAction="#saveThemeClick" prefHeight="25.0" prefWidth="200.0" text="Save theme to library" />
+      <Button layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#homeButtonClick" prefHeight="25.0" prefWidth="111.0" text="Go back home" />
+      <Label fx:id="message" layoutX="428.0" layoutY="74.0" prefHeight="17.0" prefWidth="152.0" />
+   </children>
+</AnchorPane>

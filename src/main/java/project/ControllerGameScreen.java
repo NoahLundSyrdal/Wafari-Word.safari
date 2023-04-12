@@ -43,11 +43,17 @@ public class ControllerGameScreen {
 
     @FXML
     private Label moreText;
+
+    private String finalTheme;
+    private int finalAmount;
+    private String[] words;
     
 
     public ControllerGameScreen(Stage primaryStage, ControllerMainScreen controllerMainScreen) throws IOException {
         this.primaryStage = primaryStage;
         this.controllerMainScreen = controllerMainScreen;
+        this.finalAmount = controllerMainScreen.getAmount();
+        this.finalTheme = controllerMainScreen.getTheme();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("GameScreen.fxml"));
         loader.setController(this);
@@ -59,13 +65,33 @@ public class ControllerGameScreen {
         primaryStage.show();
     }
 
+    public ControllerGameScreen(Stage primaryStage, String theme, String[] words, int finalAmount) throws IOException {
+        this.primaryStage = primaryStage;
+        this.finalTheme = theme;
+        this.words = words;
+        this.finalAmount = finalAmount;
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GameScreen.fxml"));
+        loader.setController(this);
+
+        primaryStage.setScene(new Scene(loader.load()));
+
+    }
+
     @FXML
     public void initialize() {
-        score.setText("Score: 0/"+controllerMainScreen.getAmount());
-        theme.setText(controllerMainScreen.getTheme());
+        score.setText("Score: 0/"+finalAmount);
+        theme.setText(finalTheme);
 
-        Solution solution = new Solution(controllerMainScreen.getTheme(), controllerMainScreen.getAmount());
-        this.solution = solution;
+        if (controllerMainScreen != null) {
+            Solution solution = new Solution(finalTheme, finalAmount);
+            this.solution = solution;
+        }
+        else {
+            Solution solution = new Solution(words);
+            this.solution = solution;
+        }
+
         solutionSize = solution.size();
 
         Grid grid = new Grid(solution);
@@ -136,7 +162,7 @@ public class ControllerGameScreen {
                     moreText.setVisible(true);
                 }
 
-                score.setText("Score "+Integer.toString(scoreCount)+"/"+controllerMainScreen.getAmount());
+                score.setText("Score "+Integer.toString(scoreCount)+"/"+finalAmount);
 
                 solution.getSolution().remove(word);
                 break;
