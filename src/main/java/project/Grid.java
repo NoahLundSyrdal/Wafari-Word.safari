@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.HashMap;
 
 
-public class Grid {
+public class Grid implements GridInterface{
     private char[][] grid;
     private Solution solution;
     private ArrayList<String> horizontal;
