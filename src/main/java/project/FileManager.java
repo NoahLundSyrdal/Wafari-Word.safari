@@ -13,8 +13,9 @@ public class FileManager {
     private HashMap<String, String[]> map;
 
     public FileManager() {
-       //this.map = readDictionary("C:/Users/matia/Documents/GIT2023/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
-       this.map = readDictionary("/Users/noahsyrdal/Desktop/OOP PROSJEKT/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
+       this.map = readDictionary("C:/Users/matia/Documents/GIT2023/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
+
+       //this.map = readDictionary("/Users/noahsyrdal/Desktop/OOP PROSJEKT/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt");
     }
 
     public HashMap<String, String[]> readDictionary(String fileName) {
@@ -56,8 +57,8 @@ public class FileManager {
         String wordString = String.join(",", words);
 
         try {
-            //writer = new BufferedWriter(new FileWriter("C:/Users/matia/Documents/GIT2023/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt", true));
-            writer = new BufferedWriter(new FileWriter("/Users/noahsyrdal/Desktop/OOP PROSJEKT/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt", true));
+            writer = new BufferedWriter(new FileWriter("C:/Users/matia/Documents/GIT2023/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt", true));
+            //writer = new BufferedWriter(new FileWriter("/Users/noahsyrdal/Desktop/OOP PROSJEKT/tdt-4100-prosjekt-noah-matias/src/main/java/project/Words.txt", true));
 
             writer.append(theme + ";" + wordString);
             writer.newLine();
