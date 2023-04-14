@@ -18,8 +18,8 @@ public class Grid implements GridInterface{
 
     public Grid(Solution solution) {
         this.solution = solution;
-        this.horizontalSize = this.solution.size()/2;
-        this.verticalSize = this.solution.size() - this.horizontalSize;
+        this.verticalSize = this.solution.size()/2;
+        this.horizontalSize = this.solution.size() - this.verticalSize;
 
         this.gridCreate();
         this.fillGrid();

@@ -11,15 +11,13 @@ public class WafariTest {
     public void testSolutionConstructor() {
         Assertions.assertThrows(IllegalStateException.class, () -> new Solution("random", 20));
         Assertions.assertDoesNotThrow(() -> new Solution("Fruits", 8), "Too big of a grid");
-    }
-
-    @Test
-    public void testGetLongestWordSize() {
+    
+     
         String[] testWords = {"apples", "bananas", "watermelons"};
         Solution solution = new Solution(testWords);
         
         assertEquals(11, solution.getLongestWordSize());
-    };
+    }
 
     @Test
     public void testGetWordsForTheme() {
