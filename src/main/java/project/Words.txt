@@ -25,3 +25,4 @@ Art Styles;Impressionism,Surrealism,Cubism,Realism,AbstractExpressionism,PopArt,
 Sports Equipment;SoccerBall,Basketball,Football,BaseballBat,GolfClub,TennisRacquet,HockeyStick,Skateboard,Surfboard,Bicycle
 Dog Breeds;GoldenRetriever,LabradorRetriever,GermanShepherd,Poodle,Bulldog,Beagle,Boxer,Dachshund,Chihuahua,SiberianHusky
 WhenWordsCollide;words,when,collide
+johan;feit,lat
